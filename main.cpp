@@ -48,6 +48,6 @@ int main() {
 	findPublisher(book_arr, size, "Henry Holt");
 
 	std::cout << "Extra line of code" << std::endl;
-
+	std::cout << "End of program" << std::endl;
 }
 
