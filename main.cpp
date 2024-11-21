@@ -12,26 +12,26 @@
 */
 
 //ïîèñê ïî çíà÷åíèþ: author == string
-void findAuthor(Book* book, int size, const char* author) {
-	std::cout << "-----Search by author-----" << std::endl;
-	for (int i = 0; i < size; i++) {
-		if (strcmp(book[i].getAuthor().getstr(), author) == 0) {
-			book[i].print();
-			std::cout << std::endl;
-		}
-	}
-}
-
-
-void findPublisher(Book* book, int size, const char* publisher) {
-	std::cout << "-----Search by publisher-----" << std::endl;
-	for (int i = 0; i < size; i++) {
-		if (strcmp(book[i].getPublisher().getstr(), publisher) == 0) {
-			book[i].print();
-			std::cout << std::endl;
-		}
-	}
-}
+//void findAuthor(Book* book, int size, const char* author) {
+//	std::cout << "-----Search by author-----" << std::endl;
+//	for (int i = 0; i < size; i++) {
+//		if (strcmp(book[i].getAuthor().getstr(), author) == 0) {
+//			book[i].print();
+//			std::cout << std::endl;
+//		}
+//	}
+//}
+//
+//
+//void findPublisher(Book* book, int size, const char* publisher) {
+//	std::cout << "-----Search by publisher-----" << std::endl;
+//	for (int i = 0; i < size; i++) {
+//		if (strcmp(book[i].getPublisher().getstr(), publisher) == 0) {
+//			book[i].print();
+//			std::cout << std::endl;
+//		}
+//	}
+//}
 
 
 int main() {
@@ -44,11 +44,11 @@ int main() {
 		{"Wells", "The Time Machine", "Henry Holt", 1895, 84}
 	};
 	
-	findAuthor(book_arr, size, "Dostoevsky");
-	findPublisher(book_arr, size, "Henry Holt");
+	//findAuthor(book_arr, size, "Dostoevsky");
+	//findPublisher(book_arr, size, "Henry Holt");
 
 
-	std::cout << "Checking string compare method" << std::endl;
-	std::cout << book_arr[0].getAuthor().compare("Tolstoyq");
+	//std::cout << "Checking string compare method" << std::endl;
+	//std::cout << book_arr[0].getAuthor().compare("Tolstoyq");
 }
 

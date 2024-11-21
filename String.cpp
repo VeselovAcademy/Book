@@ -13,9 +13,9 @@ String::String() :String("No Data") {};
 String::String(const String& obj) : String(obj.str) {}
 
 
-int String::compare(const String& str) {
-	return strcmp(this->str, str.str);
-}
+//int String::compare(const String& str) {
+//	return strcmp(this->str, str.str);
+//}
 
 
 

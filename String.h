@@ -25,7 +25,7 @@ public:
 	String(const String& obj);
 
 	//написать метод для сравнения строк
-	int compare(const String& str);
+	//int compare(const String& str);
 
 
 	void enter();
