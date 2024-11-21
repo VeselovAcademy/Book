@@ -25,8 +25,9 @@ public:
 	String(const String& obj);
 
 	//написать метод для сравнения строк
-	//int compare(const String& str);
+	int compare(const String& s);
 
+	int operator==(const String& s);
 
 	void enter();
 	const char* getstr() const;

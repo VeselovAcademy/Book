@@ -5,10 +5,11 @@
 
 
 /*
-Ñîçäàòü ìàññèâ îáúåêòîâ. Âûâåñòè:
-- ñïèñîê êíèã çàäàííîãî àâòîðà;
-- ñïèñîê êíèã, âûïóùåííûõ çàäàííûì èçäàòåëüñòâîì;
-- ñïèñîê êíèã, âûïóùåííûõ ïîñëå çàäàííîãî ãîäà.
+Создать массив объектов.
+Вывести:
+■ список книг заданного автора;
+■ список книг, выпущенных заданным издательством;
+■ список книг, выпущенных после заданного года
 */
 
 //ïîèñê ïî çíà÷åíèþ: author == string
@@ -32,23 +33,57 @@
 //		}
 //	}
 //}
+// 
+
+void printAuthor( const Book* a_book, const int size, String str) {
+	for (int i = 0; i < size; i++) {
+		if (a_book[i].getAuthor().compare(str) == 0)
+			a_book[i].print();
+	}
+}
+
+void afterYear(Book* a_book, int size, unsigned year_p) {
+	for (int i = 0; i < size; i++) {
+		if (a_book[i].getYear() > year_p) {
+			a_book[i].print();
+		}
+	}
+}
+
+void printBook(Book book) {
+	book.print();
+}
 
 
 int main() {
 	const int size = 5;
 	Book book_arr[size]{
-		{"Tolstoy", "Piece and War", "Satr", 1750, 1200},
-		{"Dostoevsky", "Idiot", "Moscow", 1860, 900},
-		{"Dostoevsky", "Besi", "Moscow", 1870, 920},
-		{"Dostoevsky", "Crime and Commit","Moscow", 1890, 890},
-		{"Wells", "The Time Machine", "Henry Holt", 1895, 84}
+		Book {"Tolstoy", "Piece and War", "Star", 1750, 1200},
+		Book {"Dostoevsky", "Idiot", "Moscow", 1860, 900},
+		Book {"Dostoevsky", "Besi", "Moscow", 1870, 920},
+		Book {"Dostoevsky", "Crime and Commit","Moscow", 1890, 890},
+		Book {"Wells", "The Time Machine", "Henry Holt", 1895, 84}
 	};
-	
+
 	//findAuthor(book_arr, size, "Dostoevsky");
 	//findPublisher(book_arr, size, "Henry Holt");
 
 
 	//std::cout << "Checking string compare method" << std::endl;
 	//std::cout << book_arr[0].getAuthor().compare("Tolstoyq");
+
+
+	//printAuthor(book_arr,size, "Dostoevsky");
+	//std::cout << "Books bublished after yaer" << std::endl;
+	//afterYear(book_arr, size, 1861);
+
+	printBook(Book{"Tolstoy", "Piece and War", "Star", 1750, 1200});
+	
+
+	String hello{ "Hello" };
+	std::cout << (hello == "World") << std::endl;
 }
 
+
+//Показать константный методы
+//Показать Explicit как работает

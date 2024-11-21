@@ -17,7 +17,13 @@ String::String(const String& obj) : String(obj.str) {}
 //	return strcmp(this->str, str.str);
 //}
 
+int String::compare(const String& s) {
+	return strcmp(this->str, s.str );
+}
 
+int String::operator==(const String& s) {
+	return strcmp(this->str, s.str);
+}
 
 //аналог cin >> string;
 void String::enter() {

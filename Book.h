@@ -21,9 +21,9 @@ class Book
 	unsigned year;
 	unsigned pages;
 public:
-	Book(const char* author_p, const char* name_p, const char* publisher_p, unsigned year_p, unsigned pages_p);
-	
-	String getAuthor() {
+	explicit Book(const char* author_p, const char* name_p, const char* publisher_p, unsigned year_p, unsigned pages_p);
+	 
+	String getAuthor() const  {
 		return author;
 	}
 	String getName() {
@@ -44,7 +44,7 @@ public:
 
 
 
-	void print();
+	void print() const;
 
 	Book();
 };
