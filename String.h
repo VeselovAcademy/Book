@@ -23,6 +23,11 @@ public:
 	String(const char* s);
 	String();
 	String(const String& obj);
+
+	//написать метод для сравнения строк
+	int compare(const String& str);
+
+
 	void enter();
 	const char* getstr() const;
 	~String();
