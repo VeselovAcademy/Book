@@ -5,13 +5,13 @@
 
 
 /*
-Создать массив объектов. Вывести:
-- список книг заданного автора;
-- список книг, выпущенных заданным издательством;
-- список книг, выпущенных после заданного года.
+Г‘Г®Г§Г¤Г ГІГј Г¬Г Г±Г±ГЁГў Г®ГЎГєГҐГЄГІГ®Гў. Г‚Г»ГўГҐГ±ГІГЁ:
+- Г±ГЇГЁГ±Г®ГЄ ГЄГ­ГЁГЈ Г§Г Г¤Г Г­Г­Г®ГЈГ® Г ГўГІГ®Г°Г ;
+- Г±ГЇГЁГ±Г®ГЄ ГЄГ­ГЁГЈ, ГўГ»ГЇГіГ№ГҐГ­Г­Г»Гµ Г§Г Г¤Г Г­Г­Г»Г¬ ГЁГ§Г¤Г ГІГҐГ«ГјГ±ГІГўГ®Г¬;
+- Г±ГЇГЁГ±Г®ГЄ ГЄГ­ГЁГЈ, ГўГ»ГЇГіГ№ГҐГ­Г­Г»Гµ ГЇГ®Г±Г«ГҐ Г§Г Г¤Г Г­Г­Г®ГЈГ® ГЈГ®Г¤Г .
 */
 
-//поиск по значению: author == string
+//ГЇГ®ГЁГ±ГЄ ГЇГ® Г§Г­Г Г·ГҐГ­ГЁГѕ: author == string
 void findAuthor(Book* book, int size, const char* author) {
 	std::cout << "-----Search by author-----" << std::endl;
 	for (int i = 0; i < size; i++) {
@@ -47,8 +47,8 @@ int main() {
 	findAuthor(book_arr, size, "Dostoevsky");
 	findPublisher(book_arr, size, "Henry Holt");
 
+
 	std::cout << "Checking string compare method" << std::endl;
 	std::cout << book_arr[0].getAuthor().compare("Tolstoyq");
-
 }
 
