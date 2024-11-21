@@ -47,7 +47,8 @@ int main() {
 	findAuthor(book_arr, size, "Dostoevsky");
 	findPublisher(book_arr, size, "Henry Holt");
 
-
+	std::cout << "Checking string compare method" << std::endl;
+	std::cout << book_arr[0].getAuthor().compare("Tolstoyq");
 
 }
 
